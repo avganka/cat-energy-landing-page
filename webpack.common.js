@@ -9,13 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/bundle-[hash].js',
     publicPath: '',
-  },  
-  // optimization: {
-  //   // chunkIds: 'named',
-  //   splitChunks: {
-  //     chunks: 'all',
-  //   },
-  // },
+  },
   module: {
     rules: [      
       {
