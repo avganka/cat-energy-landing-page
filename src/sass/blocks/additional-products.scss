@@ -1,0 +1,28 @@
+@import "../global/variables.scss";
+
+.additional-products {
+  &__wrapper {
+    width: 280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    @media (min-width: $tablet-width) {
+      padding: 0 30px;
+      width: 708px;
+    }
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      padding: 0 110px;
+      width: 1220px;
+    }
+  }
+  &__title {
+    padding: 0 20px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}

@@ -1,0 +1,26 @@
+@import "../global/variables.scss";
+
+.find-us {
+  display: flex;
+  flex: wrap;
+  flex-direction: column;
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+
+  &__info {
+    padding: 0 20px;
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      left: 110px;
+      top: 25%;
+    }
+  }
+  &__map {
+    height: 320px;
+    width: 100%;
+    @media (min-width: $tablet-width) {
+      height: 400px;
+    }
+  }
+}

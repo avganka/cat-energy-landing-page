@@ -1,0 +1,35 @@
+@import "../global/variables.scss";
+
+.catalog {
+  &__wrapper {
+    padding: 0 20px;
+    width: 280px;
+    margin: 0 auto;
+    @media (min-width: $tablet-width) {
+      width: 708px;
+    }
+    @media (min-width: $desktop-width) {
+      width: 1220px;
+    }
+  }
+  &__title {
+    padding: 0 20px;
+  }
+
+  &__to-order {
+    width: 100%;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: $desktop-width) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}

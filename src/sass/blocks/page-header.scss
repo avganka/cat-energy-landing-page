@@ -1,0 +1,13 @@
+@import "../global/variables.scss";
+
+.page-header {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__toggle {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
