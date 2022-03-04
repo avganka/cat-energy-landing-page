@@ -1,17 +1,19 @@
 @import "../global/variables.scss";
+@import "../global/mixins.scss";
 
 .page-footer {
   display: flex;
   flex: wrap;
   flex-direction: column;
-  padding: 0 20px;
-  @media (min-width: $desktop-width) {
-    padding: 0 110px;
-  }
+  @include mobile-container-with-paddings;
+  margin: 0 auto;
   @media (min-width: $tablet-width) {
+    @include tablet-container-with-paddings;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+  }
+  @media (min-width: $desktop-width) {
+    @include desktop-container-with-paddings;
   }
 }

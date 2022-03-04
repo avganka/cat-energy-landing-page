@@ -1,23 +1,14 @@
 @import "../global/variables.scss";
+@import "../global/mixins.scss";
 
 .catalog {
-  &__wrapper {
-    padding: 0 20px;
-    width: 280px;
-    margin: 0 auto;
-    @media (min-width: $tablet-width) {
-      width: 708px;
-    }
-    @media (min-width: $desktop-width) {
-      width: 1220px;
-    }
+  @include mobile-container-with-paddings;
+  margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    @include tablet-container-with-paddings;
   }
-  &__title {
-    padding: 0 20px;
-  }
-
-  &__to-order {
-    width: 100%;
+  @media (min-width: $desktop-width) {
+    @include desktop-container-with-paddings;
   }
 
   &__list {
@@ -25,11 +16,18 @@
     padding: 0;
     list-style: none;
     @media (min-width: $tablet-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
-    @media (min-width: $desktop-width) {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+  }
+}
+
+.catalog__item {
+  @media (min-width: $tablet-width) {
+    width: 300px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 245px;
   }
 }

@@ -1,0 +1,14 @@
+@mixin mobile-container-with-paddings {
+  width: 280px;
+  padding: 0 20px;
+}
+
+@mixin desktop-container-with-paddings {
+  width: 1220px;
+  padding: 0 110px;
+}
+
+@mixin tablet-container-with-paddings {
+  width: 708px;
+  padding: 0 30px;
+}
