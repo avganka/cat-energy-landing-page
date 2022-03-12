@@ -53,10 +53,14 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.css',      
     }),
-      new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, './src/index.html'),
-        filename: 'index.html',
-      }),
-      new CleanWebpackPlugin()
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './src/index.html'),
+      filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './src/catalog.html'),
+      filename: 'catalog.html',
+    }),
+    new CleanWebpackPlugin()
   ],
 };
