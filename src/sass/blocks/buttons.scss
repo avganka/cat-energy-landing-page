@@ -1,0 +1,11 @@
+.button {
+  height: 40px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.button-to-order {
+  background-color: $color-main;
+  color: $text-color-secondary;
+}
