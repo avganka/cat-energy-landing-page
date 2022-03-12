@@ -1,19 +1,19 @@
 @import "../global/variables.scss";
 @import "../global/mixins.scss";
 
-.page-header {
-  @include mobile-container-with-paddings;
-  margin: 0 auto;
+.page-header__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 11px $mobile-padding 18px $mobile-padding;
+  margin: 0 auto;
+  @media (max-width: 767px) {
+    border-bottom: 1px solid $color3;
+  }
   @media (min-width: $tablet-width) {
-    @include tablet-container-with-paddings;
+    padding: 11px $tablet-padding 18px $tablet-padding;
   }
   @media (min-width: $desktop-width) {
-    @include desktop-container-with-paddings;
+    max-width: 1220px;
   }
-}
-
-.main-nav__list a {
-  color: #000000;
 }
