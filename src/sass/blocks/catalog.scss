@@ -1,33 +1,83 @@
 @import "../global/variables.scss";
 @import "../global/mixins.scss";
 
-.catalog {
-  @include mobile-container-with-paddings;
-  margin: 0 auto;
+.catalog__wrapper {
+  padding: 0 $mobile-padding;
+  margin: 0 auto 80px;
   @media (min-width: $tablet-width) {
-    @include tablet-container-with-paddings;
+    padding: 0 $tablet-padding;
   }
   @media (min-width: $desktop-width) {
-    @include desktop-container-with-paddings;
+    max-width: 1220px;
   }
+}
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    @media (min-width: $tablet-width) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+.catalog__title {
+  margin: 0;
+  padding: 27px $mobile-padding 49px $mobile-padding;
+  font-size: 36px;
+  line-height: 1;
+  @media (min-width: $tablet-width) {
+    padding: 27px 0 83px 0;
+    font-size: 60px;
+    padding-bottom: 83px;
+  }
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @media (min-width: $tablet-width) {
+    margin: 0 -30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  @media (min-width: $desktop-width) {
+    margin: 0 -40px;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
 .catalog__item {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px 0 20px 0;
+  position: relative;
+  @media (max-width: 767px) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      background-color: $color3;
+      top: 0;
+      left: -20px;
+    }
+    &:last-child {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height: 1px;
+        background-color: $color3;
+        bottom: 0;
+        left: -20px;
+      }
+    }
+  }
   @media (min-width: $tablet-width) {
-    width: 300px;
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   @media (min-width: $desktop-width) {
-    width: 245px;
+    max-width: 25%;
+    flex: 0 0 25%;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
