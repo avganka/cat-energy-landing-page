@@ -1,19 +1,34 @@
-@import "../global/variables.scss";
-@import "../global/mixins.scss";
-
 .page-footer {
+  background-color: $card-bgc;
+}
+
+.page-footer__wrapper {
   display: flex;
   flex: wrap;
   flex-direction: column;
-  @include mobile-container-with-paddings;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $mobile-padding;
   margin: 0 auto;
   @media (min-width: $tablet-width) {
-    @include tablet-container-with-paddings;
+    padding: 0 $tablet-padding;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
   @media (min-width: $desktop-width) {
-    @include desktop-container-with-paddings;
+    max-width: 1220px;
+    padding: 11px $desktop-padding 18px $desktop-padding;
+  }
+}
+
+.page-footer__logo {
+  padding: 25px 0;
+}
+
+.page-footer__copyright {
+  width: 100%;
+  @media (min-width: $tablet-width) {
+    width: auto;
   }
 }

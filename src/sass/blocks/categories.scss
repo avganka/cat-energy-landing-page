@@ -2,12 +2,5 @@
 @import "../global/mixins.scss";
 
 .categories {
-  @include mobile-container-with-paddings;
-  margin: 0 auto;
-  @media (min-width: $tablet-width) {
-    @include tablet-container-with-paddings;
-  }
-  @media (min-width: $desktop-width) {
-    @include desktop-container-with-paddings;
-  }
+  @include container;
 }

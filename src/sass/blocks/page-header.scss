@@ -1,12 +1,10 @@
-@import "../global/variables.scss";
-@import "../global/mixins.scss";
-
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 11px $mobile-padding 18px $mobile-padding;
+  padding: 0 $mobile-padding;
   margin: 0 auto;
+  height: 66px;
   @media (max-width: 767px) {
     border-bottom: 1px solid $color3;
   }
@@ -15,5 +13,11 @@
   }
   @media (min-width: $desktop-width) {
     max-width: 1220px;
+  }
+}
+
+.page-header__logo-mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }

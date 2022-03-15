@@ -1,7 +1,15 @@
 .card {
+  padding: 20px 0 20px 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 200px;
+
   @media (min-width: $tablet-width) {
+    flex-direction: column;
+    padding: 0 36px 40px;
+    position: relative;
     background-color: $card-bgc;
     height: 430px;
     margin-top: 44px;
@@ -10,18 +18,8 @@
   }
 }
 
-.card__content {
-  display: flex;
-  padding-bottom: 13px;
-  @media (min-width: $tablet-width) {
-    padding: 0px 36px;
-    flex-direction: column;
-    position: relative;
-  }
-}
-
 .card__image {
-  max-width: 50%;
+  max-width: 140px;
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 44px;
@@ -31,19 +29,16 @@
 }
 
 .card__info {
-  flex-grow: 1;
+  min-width: 50%;
+  padding-bottom: 10px;
   @media (min-width: $tablet-width) {
+    width: 100%;
     padding: 160px 0 0 0;
   }
 }
 
-.card__to-order {
-  @media (min-width: $tablet-width) {
-    margin: 33px 36px 40px 36px;
-  }
-}
-
 .card__title {
+  padding-bottom: 18px;
   font-size: 16px;
   text-transform: uppercase;
   margin: 0;
@@ -56,6 +51,7 @@
   @media (min-width: $desktop-width) {
   }
 }
+
 .card__features-list {
   margin: 0;
 }
