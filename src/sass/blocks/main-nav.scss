@@ -1,15 +1,18 @@
-@import "../global/variables.scss";
+.main-nav {
+  display: flex;
+  align-items: center;
+}
 
 .main-nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: none;
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
   }
 }
 
@@ -25,7 +28,7 @@
   text-decoration: none;
   cursor: pointer;
   margin-right: 34px;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
   &:hover {
     color: lighten($text-color-main, 50%);
   }
@@ -65,5 +68,54 @@
     background-color: #000000;
     top: 8px;
     left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-nav__list--opened {
+    display: block;
+    position: absolute;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 100;
+    top: 66px;
+    left: 0;
+    font-size: 20px;
+    line-height: 20px;
+    & .main-nav__item {
+      text-align: center;
+      border-top: 1px solid $color3;
+      padding: 18px 0;
+      &:last-child {
+        border-bottom: 1px solid $color3;
+      }
+    }
+    a {
+      margin: 0;
+    }
+  }
+
+  .main-nav__list--opened ~ .main-nav__toggle {
+    box-shadow: none;
+    &::before {
+      content: "";
+      position: absolute;
+      transform: rotate(45deg);
+      height: 2px;
+      width: 100%;
+      background-color: #000000;
+      top: 8px;
+      left: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      transform: rotate(-45deg);
+      background-color: #000000;
+      top: 8px;
+      left: 0;
+    }
   }
 }
