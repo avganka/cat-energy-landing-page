@@ -3,30 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="svg" href="./img/logo-adaptive.svg" /> -->
     <title>Каталог - Cat Energy</title>
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo-mobile logo" href="#">
-          <img src="./img/logo-mobile.svg" width="34" height="38" alt="Logo" />
+          <img
+            src="./img/icons/logo-mobile.svg"
+            width="34"
+            height="38"
+            alt="Logo"
+          />
         </a>
         <a class="page-header__logo logo" href="#">
           <picture>
             <source
               media="(min-width:1220px)"
-              srcset="./img/logo-desktop.svg"
+              srcset="./img/icons/logo-desktop.svg"
               width="202"
               height="60"
             />
             <source
               media="(min-width:768px)"
-              srcset="./img/logo-desktop.svg"
+              srcset="./img/icons/logo-desktop.svg"
               width="174"
               height="52"
             />
-            <img src="./img/logo 2.svg" width="101" height="21" alt="Logo" />
+            <img
+              src="./img/icons/logo 2.svg"
+              width="101"
+              height="21"
+              alt="Logo"
+            />
           </picture>
         </a>
         <nav class="main-nav">
@@ -93,9 +102,13 @@
             </li>
             <li class="catalog__item">
               <div class="show-more">
-                <svg width="30" height="30" class="show-more__icon">
-                  <use xlink:href="./img/icon-sprite.svg#plus-icon"></use>
-                </svg>
+                <img
+                  class="show-more__icon"
+                  width="30"
+                  height="30"
+                  src="./img/icons/icon-plus.svg"
+                  alt="Посмотреть еще"
+                />
                 <p class="show-more__title">Показать еще 100500 товаров</p>
                 <p class="show-more__subtitle">
                   На самом деле вкусов гораздо больше
@@ -166,13 +179,13 @@
               </li>
             </ul>
             <div class="additional-products__get-gift">
-              <svg
+              <img
                 class="additional-products__get-gift-icon"
                 width="78"
                 height="80"
-              >
-                <use xlink:href="./img/icon-sprite.svg#icon-gift"></use>
-              </svg>
+                src="./img/icons/icon-gift.svg"
+                alt="Подарок"
+              />
               <p class="additional-products__get-gift-text">
                 Закажи все и получи чехол для кота в подарок
               </p>
@@ -211,50 +224,56 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo logo">
-          <img src="./img/logo 2.svg" width="101" height="21" alt="Logo" />
+          <img
+            src="./img/icons/logo 2.svg"
+            width="101"
+            height="21"
+            alt="Logo"
+          />
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vk" href="#">
-                <svg
-                  class="additional-products__get-gift-icon"
+                <img
                   width="22"
                   height="22"
-                >
-                  <use xlink:href="./img/icon-sprite.svg#icon-vk"></use>
-                </svg>
+                  src="./img/icons/icon-vkontakte.svg"
+                  alt="VK"
+                />
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--insta" href="#">
-                <svg
-                  class="additional-products__get-gift-icon"
+                <img
                   width="22"
                   height="22"
-                >
-                  <use xlink:href="./img/icon-sprite.svg#icon-insta"></use>
-                </svg>
+                  src="./img/icons/icon-instagram.svg"
+                  alt="Instagram"
+                />
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#">
-                <svg
-                  class="additional-products__get-gift-icon"
+                <img
                   width="22"
                   height="22"
-                >
-                  <use xlink:href="./img/icon-sprite.svg#icon-facebook"></use>
-                </svg>
+                  src="./img/icons/icon-facebook.svg"
+                  alt="Facebook"
+                />
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <p class="copyright__title">HTML Academy</p>
-          <svg class="copyright__icon" width="27" height="34">
-            <use xlink:href="./img/icon-sprite.svg#logo-htmlacademy"></use>
-          </svg>
+          <img
+            class="copyright__icon"
+            width="27"
+            height="34"
+            src="./img/icons/icon-copyright.svg"
+            alt="Copyright"
+          />
         </div>
       </div>
     </footer>
