@@ -13,7 +13,7 @@ module.exports = {
   module: {
     rules: [      
       {
-        test: /\.(s*)css$/,
+        test: /\.(s*)css$/i,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -30,7 +30,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(html)$/,
+        test: /\.(html)$/i,
         use: {
           loader: 'html-loader-srcset',
           options: {
@@ -39,17 +39,24 @@ module.exports = {
         }
       },
       {
-        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-        type: 'asset',
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/i,
+        type: 'asset/resource',
         generator: {
           filename: './fonts/[name]-[hash][ext]',
         },
       },
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
+        test: /\.(gif|png|jpe?g)$/i,
         type: 'asset/resource',
         generator: {
           filename: './img/[name]-[hash][ext]',          
+        },
+      },
+      {
+        test: /\.svg$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: './img/icons/[name]-[hash][ext]',          
         },
       },
     ],
