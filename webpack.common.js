@@ -31,7 +31,12 @@ module.exports = {
       },
       {
         test: /\.(html)$/,
-        use: 'html-loader',
+        use: {
+          loader: 'html-loader-srcset',
+          options: {
+             attrs: [':src', ':srcset'],
+          }            
+        }
       },
       {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
@@ -42,9 +47,9 @@ module.exports = {
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
-        type: 'asset',
+        type: 'asset/resource',
         generator: {
-          filename: './img/[name]-[hash][ext]',
+          filename: './img/[name]-[hash][ext]',          
         },
       },
     ],
