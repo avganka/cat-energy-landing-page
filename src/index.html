@@ -6,164 +6,367 @@
     <title>Главная - Cat Energy</title>
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header-promo">
       <div class="page-header__wrapper">
-        <a class="page-header__logo" href="#">
-          <img src="./img/logo-desktop.svg" alt="Логотип" />
-        </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+        <div class="page-header__top">
+          <a class="page-header__logo-mobile logo" href="#">
+            <img
+              src="./img/icons/logo-mobile.svg"
+              width="34"
+              height="38"
+              alt="Logo"
+            />
+          </a>
+          <a class="page-header__logo logo" href="#">
+            <picture>
+              <source
+                media="(min-width:1220px)"
+                srcset="./img/icons/logo-desktop.svg"
+                width="202"
+                height="60"
+              />
+              <source
+                media="(min-width:768px)"
+                srcset="./img/icons/logo-desktop.svg"
+                width="174"
+                height="52"
+              />
+              <img
+                src="./img/icons/logo 2.svg"
+                width="101"
+                height="21"
+                alt="Logo"
+              />
+            </picture>
+          </a>
+          <nav class="main-nav">
+            <ul class="main-nav__list main-nav__list--no-js">
+              <li class="main-nav__item main-nav__item--active">
+                <a href="./index.html"> Главная </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="./catalog.html"> Каталог продукции </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="./program.html"> Подбор программы </a>
+              </li>
+            </ul>
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </nav>
+        </div>
+
+        <div class="page-bottom__promo promo">
+          <h2 class="promo__title">Функциональное питание для котов</h2>
+          <p class="promo__slogan">Занялся собой? Займись котом</p>
+          <picture>
+            <source
+              media="(min-width: 1220px)"
+              srcset="./img/index-can.png 1x, ./img/index-can@2x.png 2x"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                ./img/index-can-tablet.jpg    1x,
+                ./img/index-can-tablet@2x.jpg 2x
+              "
+            />
+            <img
+              srcset="./img/index-can-mobile@2x.png 2x"
+              src="./img/index-can-mobile.png"
+              alt="Упаковка питательной еды"
+              class="promo__image"
+            />
+          </picture>
+          <button class="promo__choose-program button button-promo">
+            Подобрать программу
           </button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
-              <a href="./index.html"> Главная </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="./catalog.html"> Каталог продукции </a>
-            </li>
-            <li class="main-nav__item">
-              <a href=""> Подбор программы </a>
-            </li>
-          </ul>
-        </nav>
+        </div>
       </div>
     </header>
 
     <main class="page-main">
       <h1 class="visually-hidden">Функциональное питание для котов</h1>
 
-      <section class="promo">
-        <h2 class="promo__title">Функциональное питание для котов</h2>
-        <span class="promo__subtitle">Занялся собой? Займись котом</span>
-        <img
-          src="./img/index-can.png"
-          alt="Функциональное питание"
-          class="promo__img"
-        />
-        <button class="promo__choose button button-to-order"></button>
-      </section>
-
       <section class="categories">
-        <div class="categories__item category">
-          <p class="category__title">Похудение</p>
-          <p class="category__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-            tempora, commodi inventore, dolorum odit quas aut aspernatur aliquam
-            minus dignissimos assumenda quasi voluptates voluptatem quibusdam
-            sunt est, nostrum esse cum!
-          </p>
-          <a class="category__button" href="#">Каталог SLIM</a>
-        </div>
-        <div class="categories__item category">
-          <p class="category__title">Похудение</p>
-          <p class="category__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-            tempora, commodi inventore, dolorum odit quas aut aspernatur aliquam
-            minus dignissimos assumenda quasi voluptates voluptatem quibusdam
-            sunt est, nostrum esse cum!
-          </p>
-          <a class="category__button" href="#">Каталог SLIM</a>
+        <h2 class="visually-hidden">Выбор программы</h2>
+        <div class="categories__list">
+          <article class="categories__item category">
+            <div class="category__icon-wrapper">
+              <img
+                class="category__icon category__icon--slim"
+                width="36px"
+                height="50px"
+                src="./img/icons/icon-cat-slim.svg"
+                alt="Похудение"
+              />
+            </div>
+            <p class="category__title">Похудение</p>
+            <p class="category__description">
+              Ваш кот весит больше собаки и почти утратил способность лазить по
+              деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
+              сбросить лишний вес.
+            </p>
+            <a class="category__button" href="#"
+              >Каталог SLIM
+              <img
+                src="./img/icons/icon_arrow.svg"
+                width="32px"
+                height="12px"
+                alt="Стрелка"
+              />
+            </a>
+          </article>
+          <article class="categories__item category">
+            <div class="category__icon-wrapper">
+              <img
+                class="category__icon category__icon--pro"
+                width="67px"
+                height="28px"
+                src="./img/icons/icon-cat-pro.svg"
+                alt="Похудение"
+              />
+            </div>
+            <p class="category__title">Набор массы</p>
+            <p class="category__description">
+              Заработать авторитет среди дворовых котов и даже собак? Серия Cat
+              Energy Pro поможет вашему коту нарастить необходимые мышцы!
+            </p>
+            <a class="category__button" href="#"
+              >Каталог SLIM
+              <img
+                src="./img/icons/icon_arrow.svg"
+                width="32px"
+                height="12px"
+                alt="Стрелка"
+              />
+            </a>
+          </article>
         </div>
       </section>
 
-      <section class="about">
-        <h2 class="about__title">Как это работает</h2>
-        <ul class="about__list">
-          <li class="about__item">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              repellat distinctio at perferendis maxime!
+      <section class="how-it-works">
+        <h2 class="how-it-works__title">Как это работает</h2>
+        <ol class="how-it-works__list">
+          <li class="how-it-works__item">
+            <div class="how-it-works__icon-wrapper">
+              <img
+                class="how-it-works__icon"
+                src="./img/icons/icon_leaf.svg"
+                alt="Полезные вещества"
+                width="30px"
+                height="32px"
+              />
+            </div>
+            <p class="how-it-works__text">
+              Функциональное питание содержит только полезные питательные
+              вещества.
             </p>
           </li>
-          <li class="about__item">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              repellat distinctio at perferendis maxime!
+          <li class="how-it-works__item">
+            <div class="how-it-works__icon-wrapper">
+              <img
+                class="how-it-works__icon"
+                src="./img/icons/icon_tub.svg"
+                alt="В виде порошка"
+                width="29px"
+                height="31px"
+              />
+            </div>
+            <p class="how-it-works__text">
+              Выпускается в виде порошка, который нужно лишь залить кипятком и
+              готово.
             </p>
           </li>
-          <li class="about__item">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              repellat distinctio at perferendis maxime!
+          <li class="how-it-works__item">
+            <div class="how-it-works__icon-wrapper">
+              <img
+                class="how-it-works__icon"
+                src="./img/icons/icon_eat.svg"
+                alt="Функциональное питание"
+                width="25px"
+                height="30px"
+              />
+            </div>
+            <p class="how-it-works__text">
+              Замените один-два приема обычной еды на наше функциональное
+              питание.
             </p>
           </li>
-          <li class="about__item">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              repellat distinctio at perferendis maxime!
+          <li class="how-it-works__item">
+            <div class="how-it-works__icon-wrapper">
+              <img
+                class="how-it-works__icon"
+                src="./img/icons/icon_alarm.svg"
+                alt="Изменения через месяц"
+                width="32px"
+                height="33px"
+              />
+            </div>
+            <p class="how-it-works__text">
+              Уже через месяц наслаждайтесь изменениями к лучшему вашего
+              питомца!
             </p>
           </li>
-        </ul>
+        </ol>
       </section>
 
-      <section class="live-example">
-        <h2 class="live-example__title">Живой пример</h2>
-        <p class="live-example__description"></p>
-        <div class="live-example__features">
-          <div class="live-example__feature"></div>
-          <div class="live-example__feature"></div>
+      <section class="sample">
+        <div class="sample__wrapper">
+          <h2 class="sample__title">Живой пример</h2>
+          <div class="sample__content-wrapper">
+            <p class="sample__description">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
+              на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
+              При этом он не менял своих привычек и по-прежнему спит по 16 часов
+              в день.
+            </p>
+            <div class="sample__features">
+              <div class="sample__feature">
+                <p class="sample__feature-title">5 кг</p>
+                <span class="sample__feature-text">снижение веса</span>
+              </div>
+              <div class="sample__feature">
+                <p class="sample__feature-title">60 дней</p>
+                <span class="sample__feature-text">затрачено времени</span>
+              </div>
+            </div>
+            <p class="sample__price">Затраты на питание: 15 000 РУБ.</p>
+          </div>
+          <div class="sample__slider-wrapper">
+            <div class="sample__images">
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/before-desktop.png    1x,
+                    ./img/before-desktop@2x.png 2x
+                  "
+                />
+                <img
+                  src="./img/before-mobile.png"
+                  srcset="./img/before-mobile@2x.png 2x"
+                  alt="Изображение кота"
+                  class="sample__image sample__image--before"
+                />
+              </picture>
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/after-desktop.png    1x,
+                    ./img/after-desktop@2x.png 2x
+                  "
+                />
+                <img
+                  src="./img/after-mobile.png"
+                  srcset="./img/after-mobile@2x.png 2x"
+                  alt="Изображение кота"
+                  class="sample__image sample__image--after"
+                />
+              </picture>
+            </div>
+
+            <div class="sample__controls image-comparison-controls">
+              <div class="image-comparison-controls__label">Было</div>
+              <input
+                class="image-comparison-controls__slider"
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                name="image-comparison"
+                step="1"
+              />
+              <div class="image-comparison-controls__label">Стало</div>
+            </div>
+          </div>
         </div>
-        <p class="live-example__price"></p>
-        <img src="#" alt="Изображение кота" class="live-example__img" />
-        <div class="live-example__controls"></div>
       </section>
 
-      <section class="find-us">
-        <h2 class="visually-hidden">Наши контакты</h2>
-        <div class="find-us__info contacts">
-          <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts__address">
-            ул. Большая<br />Конюшенная площадь, д. 19/8<br />Санкт-Петербург
-          </p>
+      <section class="invitation invitation--white">
+        <div class="invitation__wrapper">
+          <div class="invitation__content">
+            <h2 class="invitation__title">
+              Приглашаем<br />
+              к сотрудничеству<br />
+              дилеров!
+            </h2>
+            <p class="invitation__address">
+              ул. Большая<br />Конюшенная, д. 19/8
+              <span class="invitation__city">Санкт-Петербург</span>
+            </p>
+          </div>
         </div>
-        <div class="find-us__map">
-          <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3Aac761b4ef0c6db8c65ea171689f40fee6eecb56eefb804c0eb0f0a91b93140fb&amp;source=constructor"
-            width="100%"
-            height="100%"
-            frameborder="0"
-          ></iframe>
-        </div>
+      </section>
+
+      <section class="map">
+        <iframe
+          class="map__content"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Aac761b4ef0c6db8c65ea171689f40fee6eecb56eefb804c0eb0f0a91b93140fb&amp;source=constructor"
+          width="100%"
+          height="100%"
+          frameborder="0"
+        ></iframe>
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__slogan page-footer__slogan--footer">
-        <b>Cat</b> energy
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo logo">
+          <img
+            src="./img/icons/logo 2.svg"
+            width="101"
+            height="21"
+            alt="Logo"
+          />
+        </a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="#">
+                <img
+                  width="22"
+                  height="22"
+                  src="./img/icons/icon-vkontakte.svg"
+                  alt="VK"
+                />
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--insta" href="#">
+                <img
+                  width="22"
+                  height="22"
+                  src="./img/icons/icon-instagram.svg"
+                  alt="Instagram"
+                />
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">
+                <img
+                  width="22"
+                  height="22"
+                  src="./img/icons/icon-facebook.svg"
+                  alt="Facebook"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <p class="copyright__title">HTML Academy</p>
+          <img
+            class="copyright__icon"
+            width="27"
+            height="34"
+            src="./img/icons/icon-copyright.svg"
+            alt="Copyright"
+          />
+        </div>
       </div>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vk" href="#"> </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--insta" href="#"> </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#"> </a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright">HTML Academy</div>
     </footer>
   </body>
 </html>
-
-<section class="catalog">
-  <div class="catalog__wrapper">
-    <ul class="catalog__list">
-      <li class="catalog__item">...</li>
-    </ul>
-  </div>
-</section>
-
-<section class="menu">
-  <div class="menu__wrapper">
-    <ul class="menu__list">
-      <li class="menu-item">
-        <a href="#" class="menu-link"> </a>
-      </li>
-    </ul>
-  </div>
-</section>
