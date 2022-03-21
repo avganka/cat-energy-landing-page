@@ -1,13 +1,70 @@
-@import "../global/variables.scss";
-@import "../global/mixins.scss";
-
 .promo {
-  @include mobile-container-with-paddings;
-  margin: 0 auto;
+  height: 480px;
+  color: #ffffff;
   @media (min-width: $tablet-width) {
-    @include tablet-container-with-paddings;
+    position: relative;
+    height: 860px;
+    background-image: none;
+    color: black;
   }
   @media (min-width: $desktop-width) {
-    @include desktop-container-with-paddings;
+    height: 696px;
+  }
+}
+
+.promo__title {
+  font-weight: normal;
+  padding: 27px 0 25px 0;
+  margin: 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 1;
+  @media (min-width: $tablet-width) {
+    width: 420px;
+    text-align: left;
+    padding: 45px 0 40px 80px;
+    font-size: 60px;
+  }
+  @media (min-width: $desktop-width) {
+    padding-top: 106px;
+  }
+}
+
+.promo__slogan {
+  padding-bottom: 29px;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 80px;
+    padding-bottom: 49px;
+  }
+  @media (min-width: $desktop-width) {
+    padding-bottom: 52px;
+  }
+}
+.promo__image {
+  display: block;
+  margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 248px;
+    left: 30px;
+    z-index: -1;
+  }
+  @media (min-width: $desktop-width) {
+    top: 25px;
+    left: 37%;
+    z-index: -1;
+  }
+}
+
+.promo__choose-program {
+  @media (min-width: $tablet-width) {
+    margin-left: 80px;
   }
 }
