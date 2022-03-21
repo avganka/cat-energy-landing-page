@@ -1,0 +1,134 @@
+.category {
+  background-color: $card-bgc;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding: 77px 62px 53px 52px;
+  }
+  @media (min-width: $desktop-width) {
+    box-sizing: border-box;
+    position: relative;
+    padding: 77px 52px 55px 52px;
+    max-width: 570px;
+  }
+}
+
+.category__title {
+  width: calc(100% - 70px);
+  margin-top: 10px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 37px;
+  position: relative;
+  z-index: 1;
+  @media (min-width: $tablet-width) {
+    width: 57%;
+    font-size: 36px;
+    line-height: 36px;
+  }
+  @media (min-width: $desktop-width) {
+    width: calc(100% - 170px);
+  }
+}
+
+.category__icon-wrapper {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: $color-main;
+  position: relative;
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 62px;
+  }
+  @media (min-width: $desktop-width) {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    right: 0;
+  }
+}
+.category__icon {
+  position: absolute;
+}
+
+.category__icon--slim {
+  bottom: 3px;
+  right: 6px;
+  @media (min-width: $tablet-width) {
+    bottom: 15px;
+    right: 30px;
+    width: 140px;
+    height: 192px;
+  }
+  @media (min-width: $desktop-width) {
+    bottom: 10px;
+    right: 10px;
+    width: 70px;
+    height: 97px;
+  }
+}
+
+.category__icon--pro {
+  top: 10px;
+  right: -6px;
+  @media (min-width: $tablet-width) {
+    width: 268px;
+    height: 112px;
+    top: 40px;
+    right: -30px;
+  }
+  @media (min-width: $desktop-width) {
+    top: 23px;
+    right: -20px;
+    width: 134px;
+    height: 56px;
+  }
+}
+
+.category__description {
+  margin: 0;
+  font-family: "Arial", serif;
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 22px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid $color3;
+  @media (min-width: $tablet-width) {
+    width: 57%;
+    border: none;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 24px;
+    padding-bottom: 52px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    border: none;
+    padding-top: 73px;
+    padding-bottom: 27px;
+  }
+}
+
+.category__button {
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 15px;
+  @media (min-width: $tablet-width) {
+    width: 57%;
+    font-size: 20px;
+    line-height: auto;
+  }
+}

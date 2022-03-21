@@ -20,11 +20,12 @@
 @import "./blocks/additional-products.scss";
 @import "./blocks/page-footer.scss";
 @import "./blocks/invitation.scss";
+@import "./blocks/promo.scss";
 
 @import "./blocks/promo.scss";
 @import "./blocks/categories.scss";
-@import "./blocks/about.scss";
-@import "./blocks/live-example.scss";
+@import "./blocks/how-it-works.scss";
+@import "./blocks/sample.scss";
 
 @import "./blocks/card.scss";
 @import "./blocks/buttons.scss";
@@ -34,6 +35,8 @@
 @import "./blocks/copyright.scss";
 @import "./blocks/map.scss";
 @import "./blocks/logo.scss";
+@import "./blocks/category.scss";
+@import "./blocks/image-comparison-controls.scss";
 
 body {
   margin: 0;
