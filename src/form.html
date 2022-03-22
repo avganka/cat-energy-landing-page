@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог - Cat Energy</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <div class="page-header__top">
+          <a class="page-header__logo-mobile logo" href="#">
+            <img
+              src="./img/icons/logo-mobile.svg"
+              width="34"
+              height="38"
+              alt="Logo"
+            />
+          </a>
+          <a class="page-header__logo logo" href="#">
+            <picture>
+              <source
+                media="(min-width:1220px)"
+                srcset="./img/icons/logo-desktop.svg"
+                width="202"
+                height="60"
+              />
+              <source
+                media="(min-width:768px)"
+                srcset="./img/icons/logo-desktop.svg"
+                width="174"
+                height="52"
+              />
+              <img
+                src="./img/icons/logo 2.svg"
+                width="101"
+                height="21"
+                alt="Logo"
+              />
+            </picture>
+          </a>
+          <nav class="main-nav">
+            <ul class="main-nav__list main-nav__list--no-js">
+              <li class="main-nav__item main-nav__item--active">
+                <a href="./index.html"> Главная </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="./catalog.html"> Каталог продукции </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="./form.html"> Подбор программы </a>
+              </li>
+            </ul>
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <h1 class="page__title">Подбор программы</h1>
+      <section class="main-form">
+        <h2 class="visually-hidden">Анкета по подбору питания</h2>
+        <p class="main-form__description">
+          Заполните анкету, и мы подберем программу питания для вашего кота
+        </p>
+        <form action="POST">
+          <fieldset>
+            <label for="">Имя:*</label>
+            <input type="text" />
+            <label for="">Вес (кг):*</label>
+            <input type="text" />
+            <label for="">Возраст (лет):</label>
+            <input type="text" />
+          </fieldset>
+          <fieldset>
+            <label for="program-type">Похудение</label>
+            <input type="radio" name="down" id="program-type" />
+            <label for="program-type">Набор массы</label>
+            <input type="radio" name="up" id="program-type" />
+            <label for="program-type">Не знаю (нужен ваш совет)</label>
+            <input type="radio" name="stay" id="program-type" />
+          </fieldset>
+          <h3>Контактные данные (владелец кота)</h3>
+          <fieldset>
+            <label for="">E-mail:*</label>
+            <input type="text" />
+            <label for="">Телефон:*</label>
+            <input type="text" />
+          </fieldset>
+          <h3>Комментарий</h3>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <h3>Дополнительно</h3>
+          <label for="program-type">Похудение</label>
+          <input type="radio" name="down" id="program-type" />
+          <label for="program-type">Похудение</label>
+          <input type="radio" name="down" id="program-type" />
+          <label for="program-type">Похудение</label>
+          <input type="radio" name="down" id="program-type" />
+          <label for="program-type">Похудение</label>
+          <input type="radio" name="down" id="program-type" />
+          <button type="submit">Отправить заявку</button>
+          <p>* - обязательные поля</p>
+        </form>
+      </section>
+
+      <section class="invitation">
+        <div class="invitation__wrapper">
+          <div class="invitation__content">
+            <h2 class="invitation__title">
+              Приглашаем<br />
+              к сотрудничеству<br />
+              дилеров!
+            </h2>
+            <p class="invitation__address">
+              ул. Большая<br />Конюшенная, д. 19/8
+              <span class="invitation__city">Санкт-Петербург</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="map">
+        <iframe
+          class="map__content"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Aac761b4ef0c6db8c65ea171689f40fee6eecb56eefb804c0eb0f0a91b93140fb&amp;source=constructor"
+          width="100%"
+          height="100%"
+          frameborder="0"
+        ></iframe>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo logo">
+          <img
+            src="./img/icons/logo 2.svg"
+            width="101"
+            height="21"
+            alt="Logo"
+          />
+        </a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="#">
+                <img
+                  width="22"
+                  height="22"
+                  src="./img/icons/icon-vkontakte.svg"
+                  alt="VK"
+                />
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--insta" href="#">
+                <img
+                  width="22"
+                  height="22"
+                  src="./img/icons/icon-instagram.svg"
+                  alt="Instagram"
+                />
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">
+                <img
+                  width="22"
+                  height="22"
+                  src="./img/icons/icon-facebook.svg"
+                  alt="Facebook"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <p class="copyright__title">HTML Academy</p>
+          <img
+            class="copyright__icon"
+            width="27"
+            height="34"
+            src="./img/icons/icon-copyright.svg"
+            alt="Copyright"
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
