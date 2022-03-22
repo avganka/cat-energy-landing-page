@@ -73,6 +73,10 @@ module.exports = {
       template: path.resolve(__dirname, './src/catalog.html'),
       filename: 'catalog.html',
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './src/form.html'),
+      filename: 'form.html',
+    }),
     new CleanWebpackPlugin()
   ],
 };
