@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = { 
   entry: './src/js/index.js',
@@ -12,23 +12,23 @@ module.exports = {
   },
   module: {
     rules: [      
-      {
-        test: /\.(s*)css$/i,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'sass-loader',
-          },
-        ],
-      },
+      // {
+      //   test: /\.(s*)css$/i,
+      //   use: [
+      //     {
+      //       loader: MiniCssExtractPlugin.loader,
+      //     },
+      //     {
+      //       loader: 'css-loader',
+      //       options: {
+      //         sourceMap: true,
+      //       },
+      //     },
+      //     {
+      //       loader: 'sass-loader',
+      //     },
+      //   ],
+      // },
       {
         test: /\.(html)$/i,
         use: {
@@ -46,7 +46,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(gif|png|jpe?g)$/i,
+        test: /\.(gif|png|webp|jpe?g)$/i,
         type: 'asset/resource',
         generator: {
           filename: './img/[name]-[hash][ext]',          
