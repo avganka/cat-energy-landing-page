@@ -1,0 +1,310 @@
+.main-form {
+  padding: 0 $mobile-padding 0 $mobile-padding;
+  margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    padding: 0 $tablet-padding 0 $tablet-padding;
+  }
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
+  }
+}
+
+.main-form__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: normal;
+  margin: 27px 0 27px 0;
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 64px 0 54px 0;
+  }
+  @media (min-width: $desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 64px 0 56px 0;
+  }
+}
+
+.main-form__description {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-bottom: 19px;
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 46px;
+    width: 50%;
+  }
+  @media (min-width: $desktop-width) {
+    width: 30%;
+  }
+}
+
+.form__blocks-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+.form__main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  padding: 0;
+  margin: 20px 0;
+  height: 160px;
+  @media (min-width: $tablet-width) {
+    height: 200px;
+  }
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    width: 568px;
+  }
+}
+
+.form__contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  padding: 0;
+  height: 110px;
+  margin: 20px 0;
+  @media (min-width: $tablet-width) {
+    height: 125px;
+  }
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .form__item {
+      width: 568px;
+    }
+  }
+}
+
+.form__item {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  @media (min-width: $tablet-width) {
+  }
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.text-input {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  & input {
+    text-transform: uppercase;
+    font-family: "Oswald", serif;
+    border: 1px solid #e7e7e7;
+    padding: 13px 14px;
+    flex-grow: 1;
+    margin-left: 14px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    & input {
+      padding: 11px 19px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+.form__choose-program {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  padding: 0;
+  margin: 0 (-$mobile-padding);
+  padding: 20px $mobile-padding;
+  box-sizing: border-box;
+  border-bottom: 1px solid $color3;
+  border-top: 1px solid $color3;
+  height: 160px;
+  @media (min-width: $tablet-width) {
+    height: 200px;
+    border: 1px solid $color3;
+    margin: 0;
+    padding: 25px 25px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 569px;
+  }
+}
+
+.radio-input {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  & input {
+    margin-right: 14px;
+    height: 30px;
+    width: 30px;
+  }
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: auto;
+    & input {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
+
+.text-input--email,
+.text-input--phone {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 16px;
+    background-image: url("/src/img/icons/icon_email.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    padding: 5px 5px 5px 15px;
+    right: 5px;
+    top: 11px;
+  }
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: 46px;
+      padding: 10px 10px 10px 25px;
+    }
+  }
+}
+
+.text-input--phone {
+  &::before {
+    height: 20px;
+    background-image: url("/src/img/icons/icon_phone.svg");
+    top: 44px;
+  }
+}
+.form__comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.textarea-input {
+  height: 150px;
+  font-family: "Oswald", serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border: 1px solid #e7e7e7;
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+.form__additional-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  padding: 0;
+  margin: 20px 0;
+  height: 160px;
+  @media (min-width: $tablet-width) {
+    height: 120px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .form__item {
+      width: 45%;
+    }
+  }
+  @media (min-width: $desktop-width) {
+    .form__item {
+      width: 25%;
+    }
+  }
+}
+
+.form__article-title {
+  display: inline-block;
+  margin: 0 (-$mobile-padding);
+  padding: 20px $mobile-padding 15px $mobile-padding;
+  text-transform: none;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: normal;
+  background-color: #ffffff;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 42px;
+    width: 100vw;
+    left: -20px;
+    z-index: -1;
+    height: 2px;
+    background-color: $color-main;
+    @media (min-width: $tablet-width) {
+      top: 48px;
+    }
+    @media (min-width: $desktop-width) {
+      top: 50px;
+      left: calc((50vw - 1220px / 2) * -1);
+    }
+  }
+  @media (min-width: $tablet-width) {
+    & br {
+      display: none;
+    }
+    margin: 0 calc(15px - $tablet-padding);
+    padding: 26px $tablet-padding 15px calc($tablet-padding - 15px);
+    font-size: 36px;
+    line-height: 36px;
+  }
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.form__submit-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+}
+.form__button {
+  @media (min-width: $tablet-width) {
+    width: 45%;
+  }
+}
+
+.form__note {
+  display: inline-block;
+  text-transform: none;
+  margin: 21px 0 32px;
+  @media (min-width: $tablet-width) {
+    width: 45%;
+  }
+  @media (min-width: $desktop-width) {
+    width: 50%;
+  }
+}
