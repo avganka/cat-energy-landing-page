@@ -1,4 +1,5 @@
 import '../sass/style.scss';
+import 'webp-in-css/polyfill'
 
 
 //Mobile menu
