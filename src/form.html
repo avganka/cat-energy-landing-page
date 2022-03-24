@@ -60,49 +60,110 @@
     </header>
 
     <main class="page-main">
-      <h1 class="page__title">Подбор программы</h1>
+      <h1 class="visually-hidden">Анкета по подбору питания</h1>
       <section class="main-form">
-        <h2 class="visually-hidden">Анкета по подбору питания</h2>
+        <h2 class="main-form__title">Подбор программы</h2>
         <p class="main-form__description">
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
-        <form action="POST">
-          <fieldset>
-            <label for="">Имя:*</label>
-            <input type="text" />
-            <label for="">Вес (кг):*</label>
-            <input type="text" />
-            <label for="">Возраст (лет):</label>
-            <input type="text" />
+        <form class="form">
+          <div class="form__blocks-wrapper">
+            <fieldset class="form__main-info">
+              <label class="form__item text-input">
+                <span>Имя:*</span>
+                <input type="text" name="name" placeholder="Барсик" required />
+              </label>
+              <label class="form__item text-input">
+                <span>Вес (кг):*</span>
+                <input type="number" name="weight" placeholder="7" required />
+              </label>
+              <label class="form__item text-input">
+                <span>Возраст (лет):</span>
+                <input type="number" name="age" placeholder="7" />
+              </label>
+            </fieldset>
+            <fieldset class="form__choose-program">
+              <label class="form__item radio-input">
+                <input
+                  type="radio"
+                  name="program-type"
+                  value="Похудение"
+                  checked
+                />
+                <span>Похудение</span>
+              </label>
+              <label class="form__item radio-input">
+                <input type="radio" name="program-type" value="Набор массы" />
+                <span>Набор массы</span>
+              </label>
+              <label class="form__item radio-input">
+                <input type="radio" name="program-type" value="Не знаю" />
+                <span>Не знаю (нужен ваш совет)</span>
+              </label>
+            </fieldset>
+          </div>
+          <h3 class="form__article-title">
+            Контактные данные<br />
+            (владелец кота)
+          </h3>
+          <fieldset class="form__contact-info">
+            <label class="form__item text-input text-input--email">
+              <span>E-mail:*</span>
+              <input type="email" value="kuklachev@gmail.com" required />
+            </label>
+            <label class="form__item text-input text-input--phone">
+              <span>Телефон:*</span>
+              <input type="tel" value="8 (960) 900-60-90" required />
+            </label>
           </fieldset>
-          <fieldset>
-            <label for="program-type">Похудение</label>
-            <input type="radio" name="down" id="program-type" />
-            <label for="program-type">Набор массы</label>
-            <input type="radio" name="up" id="program-type" />
-            <label for="program-type">Не знаю (нужен ваш совет)</label>
-            <input type="radio" name="stay" id="program-type" />
+
+          <h3 class="form__article-title">Комментарий</h3>
+          <fieldset class="form__comment">
+            <textarea
+              name="comment"
+              placeholder="Расскажите обо всех повадках кот"
+              class="textarea-input"
+            ></textarea>
           </fieldset>
-          <h3>Контактные данные (владелец кота)</h3>
-          <fieldset>
-            <label for="">E-mail:*</label>
-            <input type="text" />
-            <label for="">Телефон:*</label>
-            <input type="text" />
+
+          <h3 class="form__article-title">Дополнительно</h3>
+          <fieldset class="form__additional-options">
+            <label class="form__item radio-input">
+              <input
+                type="checkbox"
+                name="additional-options"
+                value="Сахарозаменитель"
+                checked
+              />
+              <span>Сахарозаменитель</span>
+            </label>
+            <label class="form__item radio-input">
+              <input type="checkbox" name="additional-options" value="Молоко" />
+              <span>Молока</span>
+            </label>
+            <label class="form__item radio-input">
+              <input
+                type="checkbox"
+                name="additional-options"
+                value="Питьевая вода"
+              />
+              <span>Питьевая вода</span>
+            </label>
+            <label class="form__item radio-input">
+              <input
+                type="checkbox"
+                name="additional-options"
+                value="Витамины"
+              />
+              <span>Витамины</span>
+            </label>
           </fieldset>
-          <h3>Комментарий</h3>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-          <h3>Дополнительно</h3>
-          <label for="program-type">Похудение</label>
-          <input type="radio" name="down" id="program-type" />
-          <label for="program-type">Похудение</label>
-          <input type="radio" name="down" id="program-type" />
-          <label for="program-type">Похудение</label>
-          <input type="radio" name="down" id="program-type" />
-          <label for="program-type">Похудение</label>
-          <input type="radio" name="down" id="program-type" />
-          <button type="submit">Отправить заявку</button>
-          <p>* - обязательные поля</p>
+          <div class="form__submit-wrapper">
+            <button type="submit" class="form__button button">
+              Отправить заявку
+            </button>
+            <p class="form__note">* — Обязательные поля</p>
+          </div>
         </form>
       </section>
 
@@ -147,32 +208,17 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vk" href="#">
-                <img
-                  width="22"
-                  height="22"
-                  src="./img/icons/icon-vkontakte.svg"
-                  alt="VK"
-                />
+                <img src="./img/icons/icon-vkontakte.svg" alt="VK" />
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--insta" href="#">
-                <img
-                  width="22"
-                  height="22"
-                  src="./img/icons/icon-instagram.svg"
-                  alt="Instagram"
-                />
+                <img src="./img/icons/icon-instagram.svg" alt="Instagram" />
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#">
-                <img
-                  width="22"
-                  height="22"
-                  src="./img/icons/icon-facebook.svg"
-                  alt="Facebook"
-                />
+                <img src="./img/icons/icon-facebook.svg" alt="Facebook" />
               </a>
             </li>
           </ul>

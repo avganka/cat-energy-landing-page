@@ -68,12 +68,21 @@
           <ul class="catalog__list">
             <li class="catalog__item">
               <div class="card">
-                <img
-                  src="./img/catalog-1-desktop.png"
-                  srcset="./img/catalog-1-desktop@2x.png 2x"
-                  alt="Изображение товара"
-                  class="card__image"
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      ./img/catalog-1-desktop.webp    1x,
+                      ./img/catalog-1-desktop@2x.webp 2x
+                    "
+                  />
+                  <img
+                    src="./img/catalog-1-desktop.png"
+                    srcset="./img/catalog-1-desktop@2x.png 2x"
+                    alt="Изображение товара"
+                    class="card__image"
+                  />
+                </picture>
                 <div class="card__info">
                   <p class="card__title">
                     Cat energy<br />
@@ -236,32 +245,17 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vk" href="#">
-                <img
-                  width="22"
-                  height="22"
-                  src="./img/icons/icon-vkontakte.svg"
-                  alt="VK"
-                />
+                <img src="./img/icons/icon-vkontakte.svg" alt="VK" />
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--insta" href="#">
-                <img
-                  width="22"
-                  height="22"
-                  src="./img/icons/icon-instagram.svg"
-                  alt="Instagram"
-                />
+                <img src="./img/icons/icon-instagram.svg" alt="Instagram" />
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#">
-                <img
-                  width="22"
-                  height="22"
-                  src="./img/icons/icon-facebook.svg"
-                  alt="Facebook"
-                />
+                <img src="./img/icons/icon-facebook.svg" alt="Facebook" />
               </a>
             </li>
           </ul>

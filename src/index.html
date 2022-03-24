@@ -62,6 +62,23 @@
           <p class="promo__slogan">Занялся собой? Займись котом</p>
           <picture>
             <source
+              type="image/webp"
+              media="(min-width: 1220px)"
+              srcset="./img/index-can.webp 1x, ./img/index-can@2x.webp 2x"
+            />
+            <source
+              media="(min-width: 768px)"
+              type="image/webp"
+              srcset="./img/index-can.webp 1x, ./img/index-can@2x.webp 2x"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                ./img/index-can-mobile.webp    1x,
+                ./img/index-can-mobile@2x.webp 2x
+              "
+            />
+            <source
               media="(min-width: 1220px)"
               srcset="./img/index-can.png 1x, ./img/index-can@2x.png 2x"
             />
@@ -239,6 +256,21 @@
               <picture>
                 <source
                   media="(min-width: 768px)"
+                  type="image/webp"
+                  srcset="
+                    ./img/before-desktop.webp    1x,
+                    ./img/before-desktop@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/before-mobile.webp    1x,
+                    ./img/before-mobile@2x.webp 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
                   srcset="
                     ./img/before-desktop.png    1x,
                     ./img/before-desktop@2x.png 2x
@@ -252,6 +284,21 @@
                 />
               </picture>
               <picture>
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/after-desktop.webp    1x,
+                    ./img/after-desktop@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./img/after-mobile.webp    1x,
+                    ./img/after-mobile@2x.webp 2x
+                  "
+                />
                 <source
                   media="(min-width: 768px)"
                   srcset="
@@ -326,32 +373,17 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--vk" href="#">
-                <img
-                  width="22"
-                  height="22"
-                  src="./img/icons/icon-vkontakte.svg"
-                  alt="VK"
-                />
+                <img src="./img/icons/icon-vkontakte.svg" alt="VK" />
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--insta" href="#">
-                <img
-                  width="22"
-                  height="22"
-                  src="./img/icons/icon-instagram.svg"
-                  alt="Instagram"
-                />
+                <img src="./img/icons/icon-instagram.svg" alt="Instagram" />
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#">
-                <img
-                  width="22"
-                  height="22"
-                  src="./img/icons/icon-facebook.svg"
-                  alt="Facebook"
-                />
+                <img src="./img/icons/icon-facebook.svg" alt="Facebook" />
               </a>
             </li>
           </ul>
